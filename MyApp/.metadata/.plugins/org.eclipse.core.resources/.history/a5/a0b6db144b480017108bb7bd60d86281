@@ -1,0 +1,20 @@
+package com.microservice.comics;
+
+import org.springframework.integration.annotation.MessageEndpoint;
+
+@MessageEndpoint
+public class ComicsProcessor {
+
+	private final ComicsRepository comicsRepo;
+	
+	@Autowired	
+	public ComicsProcessor(ComicsRepository comicsRepo) {
+		super();
+		this.comicsRepo = comicsRepo;
+	}
+
+	@ServiceActivator(inputChannel = "input")
+	public void acceptNewMovies(String mv) {
+		this.comicsRepo.save(new Comics());
+	}
+}

@@ -1,0 +1,65 @@
+package com.microservice.comics;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Comics {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer comicid;
+	private String comicname;
+	private Date comicreleaseyear;
+	private String comicdetails;
+	private String companyname;
+	public Comics(Integer comicId, String comicName, Date comicReleaseYear, String comicDetails, String companyNmae) {
+		super();
+		this.comicId = comicId;
+		this.comicName = comicName;
+		this.comicReleaseYear = comicReleaseYear;
+		this.comicDetails = comicDetails;
+		this.companyNmae = companyNmae;
+	}
+	public Comics() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Integer getComicId() {
+		return comicId;
+	}
+	public void setComicId(Integer comicId) {
+		this.comicId = comicId;
+	}
+	public String getComicName() {
+		return comicName;
+	}
+	public void setComicName(String comicName) {
+		this.comicName = comicName;
+	}
+	public Date getComicReleaseYear() {
+		return comicReleaseYear;
+	}
+	public void setComicReleaseYear(Date comicReleaseYear) {
+		this.comicReleaseYear = comicReleaseYear;
+	}
+	public String getComicDetails() {
+		return comicDetails;
+	}
+	public void setComicDetails(String comicDetails) {
+		this.comicDetails = comicDetails;
+	}
+	public String getCompanyNmae() {
+		return companyNmae;
+	}
+	public void setCompanyNmae(String companyNmae) {
+		this.companyNmae = companyNmae;
+	}
+	
+	
+
+}

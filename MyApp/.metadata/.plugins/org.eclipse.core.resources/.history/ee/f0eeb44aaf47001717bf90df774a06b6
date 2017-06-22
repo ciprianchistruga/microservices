@@ -1,0 +1,5 @@
+package com.microservice.company;
+
+public class CompanyController {
+
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://http://www.thymeleaf.org/"> 
+<head>
+<title>Microservice comics</title>
+</head>
+
+<body>
+	
+</body>
+</html>

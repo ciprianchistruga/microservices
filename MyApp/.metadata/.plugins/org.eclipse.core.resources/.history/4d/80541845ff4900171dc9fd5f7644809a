@@ -1,0 +1,128 @@
+package com.microservice.comic.gateway;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.hateoas.Resources;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@Controller
+@RequestMapping("/comicstore")
+public class ComicStoreController {
+
+	private final RestTemplate comicsRestTemplate;
+	private final RestTemplate companyRestTemplate;
+
+	@Autowired
+	public ComicStoreController(RestTemplate comicsRestTemplate, RestTemplate companyRestTemplate) {
+		super();
+		this.comicsRestTemplate = comicsRestTemplate;
+		this.companyRestTemplate = companyRestTemplate;
+	}
+
+	@HystrixCommand(fallbackMethod = "defaultFallback")
+	@RequestMapping(method = RequestMethod.GET, value = "/comicsfulldetails")
+	public String getComicsAndCompany(Model model) {
+		Collection<Comics> comics = this.comicsRestTemplate.exchange("http://comics-service/comics", HttpMethod.GET,
+				null, new ParameterizedTypeReference<Resources<Comics>>() {
+				}).getBody().getContent();
+
+		Collection<Company> company = this.comicsRestTemplate.exchange("http://company-service/company", HttpMethod.GET,
+				null, new ParameterizedTypeReference<Resources<Company>>() {
+				}).getBody().getContent();
+
+		List<ComicCompany> comicCompany = new ArrayList<>();
+		for (Comics c : comics) {
+			for (Company cp : company) {
+				if (c.getCompanyid() == cp.getCompanyid()) {
+					ComicCompany cc = new ComicCompany();
+					cc.setComic(c);
+					cc.setCompany(cp);
+					comicCompany.add(cc);
+				}
+			}
+		}
+		model.addAttribute("comicCompanyModel", comicCompany);
+		return "index";
+
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/comicsfulldetails/companies")
+	public void getCompanies(Model model) {
+		
+		Collection<Company> company = this.comicsRestTemplate.exchange("http://company-service/company", HttpMethod.GET,
+				null, new ParameterizedTypeReference<Resources<Company>>() {
+				}).getBody().getContent();
+		model.addAttribute("companies", company);
+
+	}
+	
+	
+	@HystrixCommand(fallbackMethod = "defaultFallback")
+	@RequestMapping(method = RequestMethod.GET, value = "/comicsfulldetails/addComic")
+	public String addComicTest(Model model) {
+		Comics c = new Comics();
+		c.setComicname("test");
+		System.out.println(c.getComicname());
+		c.setComicid(56);
+		c.setComicreleaseyear(null);
+		c.setComicdetails("test details");
+		c.setCompanyid(1);
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<?> entity = new HttpEntity<Object>(c, headers);
+		
+		this.comicsRestTemplate.exchange("http://comics-service/comics/method/add", HttpMethod.POST,
+				entity, Object.class);
+
+		
+		return "index";
+	}
+	
+
+
+	@Autowired
+	private Source output;
+
+	@HystrixCommand(fallbackMethod = "defaultFallback")
+	@RequestMapping(method = RequestMethod.GET, value = "/comicsfulldetails/add")
+	public String addComic(Model model) {
+		Comics c = new Comics();
+		c.setComicname("test");
+		System.out.println(c.getComicname());
+		c.setComicid(56);
+		c.setComicreleaseyear(null);
+		c.setComicdetails("test details");
+		c.setCompanyid(1);
+		System.out.println(c.getCompanyid());
+		MessageChannel channel = this.output.output();
+		System.out.println("channel");
+		channel.send(MessageBuilder.withPayload(c).build());
+		System.out.println("build");
+		return "index";
+	}
+	
+	private String defaultFallback(Model model) {
+		//model.addAttribute("error", "Problem");
+		
+		System.out.println("In fallback");
+		return "index";
+	}
+}

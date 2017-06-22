@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringConfigServer"/>
+<aop-project name="Comics"/>
+<aop-project name="HystrixDashboard"/>
+<aop-project name="ComicStoreGateway"/>
+<aop-project name="TestMicroservices2"/>
+<aop-project name="Company"/>
+<aop-project name="SpringEurekaServerAndConfigClient"/>
+<aop-project name="ZipkinService"/>
+<aop-project name="TestMicroservice2CLIENT"/>
+</aop-reference-model>

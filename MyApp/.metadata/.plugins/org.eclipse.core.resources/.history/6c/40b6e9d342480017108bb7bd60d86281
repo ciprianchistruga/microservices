@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Microservice comics</title>
+</head>
+
+<body>
+	<div th:if=${not !lists.isEmpty(comicCompany)}>
+		<ul th:each="comicCompanyModel: ${comicCompany}">
+			<li th:text="${comicCompanyModel.comic.comicname}"></li>
+		</ul>
+	</div>
+</body>
+</html>

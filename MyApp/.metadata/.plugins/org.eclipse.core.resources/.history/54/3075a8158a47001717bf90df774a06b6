@@ -1,0 +1,8 @@
+package com.microservice.comics;
+
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource(path = "/comics")
+public class ComicsRepository extends JpaRepository<Comics, Integer>{
+
+}

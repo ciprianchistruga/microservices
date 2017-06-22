@@ -1,0 +1,281 @@
+!SESSION 2017-06-05 14:38:21.569 -----------------------------------------------
+eclipse.buildId=3.7.3.201602250940-RELEASE-e45
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+This is a continuation of log file M:\Documente\Master\Disertatie\Application\MyApp\.metadata\.bak_0.log
+Created Time: 2017-06-05 18:58:15.427
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 2 2017-06-05 18:58:15.428
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.beans.core".
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comic.gateway.ComicStoreGatewayApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 0 2017-06-05 18:58:15.430
+!MESSAGE Internal Error
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comic.gateway.ComicStoreGatewayApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 2 2017-06-05 19:25:53.206
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.beans.core".
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comic.gateway.ComicStoreGatewayApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 0 2017-06-05 19:25:53.236
+!MESSAGE Internal Error
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comic.gateway.ComicStoreGatewayApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more
+!SESSION 2017-06-07 15:06:09.154 -----------------------------------------------
+eclipse.buildId=3.7.3.201602250940-RELEASE-e45
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.osgi 2 0 2017-06-07 15:07:37.135
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5003ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [313]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=313] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-06-07 15:08:07.696
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ciprian'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-06-07 15:08:17.044
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 2 2017-06-07 15:08:38.594
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.beans.core".
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comics.ComicsApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 0 2017-06-07 15:08:38.595
+!MESSAGE Internal Error
+!STACK 0
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.microservice.comics.ComicsApplication]; nested exception is java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:461)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:328)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate factory class: org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:138)
+	at org.springframework.core.io.support.SpringFactoriesLoader.loadFactories(SpringFactoriesLoader.java:91)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationImportFilters(AutoConfigurationImportSelector.java:280)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.filter(AutoConfigurationImportSelector.java:251)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.selectImports(AutoConfigurationImportSelector.java:102)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:453)
+	... 15 more
+Caused by: java.lang.IllegalAccessException: Class org.springframework.core.io.support.SpringFactoriesLoader can not access a member of class org.springframework.boot.autoconfigure.condition.OnClassCondition with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.springframework.core.io.support.SpringFactoriesLoader.instantiateFactory(SpringFactoriesLoader.java:135)
+	... 20 more

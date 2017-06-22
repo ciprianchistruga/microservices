@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.microservice.player.Test&apos; to &apos;Movies&apos;&#x0D;&#x0A;- Original project: &apos;PlayerMicroservice&apos;&#x0D;&#x0A;- Original element: &apos;com.microservice.player.Test&apos;&#x0D;&#x0A;- Renamed element: &apos;com.microservice.player.Movies&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Test&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.microservice.player{Test.java[Test" matchStrategy="1" name="Movies" qualified="false" references="true" similarDeclarations="true" stamp="1492353478727" textual="false" version="1.0"/>
+</session>

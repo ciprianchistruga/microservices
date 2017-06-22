@@ -1,0 +1,5 @@
+#spring cloud config host server
+spring.cloud.config.uri=http://localhost:8888
+#name of the external file where from the location where
+#the config server points
+spring.application.name=comics-service

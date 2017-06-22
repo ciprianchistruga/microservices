@@ -1,0 +1,14 @@
+package com.microservice.comic.gateway;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class GatewayConfiguration extends RepositoryRestConfigurerAdapter {
+
+    @Override
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+        config.exposeIdsFor(Company.class);
+        config.exposeIdsFor(Comics.class);
+    }
+
+}

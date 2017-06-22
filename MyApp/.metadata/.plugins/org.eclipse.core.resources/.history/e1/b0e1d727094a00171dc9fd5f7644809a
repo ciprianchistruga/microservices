@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Microservice comics</title>
+</head>
+
+<body>
+	<div th:if="${not #lists.isEmpty(comicCompanyModel)}">
+		<table th:each="comicCompany: ${comicCompanyModel}">
+		<tr>
+			<td th:text="${comicCompany.comic.comicname}"></td>
+			<td th:text="${comicCompany.comic.comicreleaseyear}"></td>
+			<td th:text="${comicCompany.comic.comicdetails}"></td>
+			<td th:text="${comicCompany.company.companyname}"></td>
+		</tr>
+		</table>
+	</div>
+	<div>
+	<form th:object="${comics}" th:action="@{/comicstore/comicsfulldetails/addComic}" method="post">
+ 	<input type="text" th:field="*{comicname}"/>
+ 	<input type="datetime-local" th:field="*{comicreleaseyear}"/>
+ 	<input type="text" th:field="*{comicdetails}"/>
+ 
+	 <select>
+	 	<option  th:each="company : ${companies}" th:value="${company.companyid}" th:text="${company.companyname}"></option>
+	 </select>
+	 	<button type="submit" />
+	 </form>
+	
+	</div>
+</body>
+</html>

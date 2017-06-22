@@ -1,0 +1,57 @@
+package com.microservice.comic.gateway;
+
+import java.util.Date;
+
+public class ComicCompany {
+
+	private Integer comicid;
+	private String comicname;
+	private Date comicreleaseyear;
+	private String comicdetails;
+	private Company company;
+	public ComicCompany(Integer comicid, String comicname, Date comicreleaseyear, String comicdetails,
+			Company company) {
+		super();
+		this.comicid = comicid;
+		this.comicname = comicname;
+		this.comicreleaseyear = comicreleaseyear;
+		this.comicdetails = comicdetails;
+		this.company = company;
+	}
+	public ComicCompany() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Integer getComicid() {
+		return comicid;
+	}
+	public void setComicid(Integer comicid) {
+		this.comicid = comicid;
+	}
+	public String getComicname() {
+		return comicname;
+	}
+	public void setComicname(String comicname) {
+		this.comicname = comicname;
+	}
+	public Date getComicreleaseyear() {
+		return comicreleaseyear;
+	}
+	public void setComicreleaseyear(Date comicreleaseyear) {
+		this.comicreleaseyear = comicreleaseyear;
+	}
+	public String getComicdetails() {
+		return comicdetails;
+	}
+	public void setComicdetails(String comicdetails) {
+		this.comicdetails = comicdetails;
+	}
+	public Company getCompany() {
+		return company;
+	}
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+	
+	
+}

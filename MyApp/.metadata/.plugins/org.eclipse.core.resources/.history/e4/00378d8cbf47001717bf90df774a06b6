@@ -1,0 +1,10 @@
+package com.microservice.comics;
+
+public class ComicsConfig extends RepositoryRestConfigurerAdapter {
+
+    @Override
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+        config.exposeIdsFor(User.class);
+    }
+
+}

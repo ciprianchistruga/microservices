@@ -1,0 +1,13 @@
+package com.microservice.company;
+
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
+
+public class CompanyConfig extends RepositoryRestConfigurerAdapter {
+
+    @Override
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+        config.exposeIdsFor(Company.class);
+    }
+
+}

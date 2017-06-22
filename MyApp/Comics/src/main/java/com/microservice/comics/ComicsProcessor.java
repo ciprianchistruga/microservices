@@ -1,0 +1,23 @@
+package com.microservice.comics;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.integration.annotation.MessageEndpoint;
+import org.springframework.integration.annotation.ServiceActivator;
+
+//@MessageEndpoint
+public class ComicsProcessor {
+/*
+	private final ComicsRepository comicsRepo;
+	
+	@Autowired	
+	public ComicsProcessor(ComicsRepository comicsRepo) {
+		super();
+		this.comicsRepo = comicsRepo;
+	}
+
+	@ServiceActivator(inputChannel = Sink.INPUT)
+	public void acceptNewMovies(Comics c) {
+		this.comicsRepo.save(c);
+	}
+*/}
